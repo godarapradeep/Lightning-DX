@@ -1,0 +1,17 @@
+<aura:component>
+    <footer id="footer">
+        <span id="todo-count"><strong>1</strong> 0 left</span>
+        <ul id="filters">
+            <li>
+                <a>All</a>
+            </li>
+            <li>
+                <a>Active</a>
+            </li>
+            <li>
+                <a>Completed</a>
+            </li>
+        </ul>
+        <button id="clear-completed">Clear completed</button>
+    </footer>
+</aura:component>	

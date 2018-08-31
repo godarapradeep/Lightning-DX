@@ -1,0 +1,14 @@
+<aura:component>
+    <aura:attribute name="newTodo" type="Todo__c" default="{'sObjectType':'Todo__c', 
+                                                            'Description__c':''}"/>
+    <aura:registerEvent name="newTodoCreated" type="c:TodoChangeEvent"/>
+
+    <header id="header">
+        <h1>todos</h1>
+        <ui:inputText aura:id="new-todo" 
+            keyup="{!c.createTodo}" 
+            value="{!v.newTodo.Description__c}"
+            class="new-todo edit"
+            />
+    </header>
+</aura:component>	

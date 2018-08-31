@@ -1,5 +1,5 @@
-<aura:application>
-    <h1>
-        Hi from lightning..
-    </h1>
-</aura:application>	
+<aura:application access="GLOBAL">
+    <!-- <c:UserDetails/> -->
+    <!--<c:BMIComponent/> -->
+    <c:TodoWrapper />
+</aura:application>

@@ -1,0 +1,10 @@
+<aura:component>
+    <aura:attribute name="todoList" type="Todo__c[]" />
+    <section id="main">
+        <ul id="todo-list">
+            <aura:iteration items="{!v.todoList}" var="todo">
+                <c:TodoItem todo="{!todo}"/>
+            </aura:iteration>
+        </ul>
+    </section>
+</aura:component>	

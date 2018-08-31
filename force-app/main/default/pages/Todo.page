@@ -1,0 +1,16 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <apex:includeLightning />
+
+    <div id="lightning" />
+
+    <script>
+        $Lightning.use("c:TodoApp", function() {
+          $Lightning.createComponent("c:TodoWrapper",
+          {},
+          "lightning",
+          function(cmp) {
+            console.log('component rendered');
+          });
+        });
+    </script>
+</apex:page>

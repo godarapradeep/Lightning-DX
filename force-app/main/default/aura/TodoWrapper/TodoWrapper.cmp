@@ -1,0 +1,19 @@
+<aura:component extends="c:UtilityComponent"  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="TodoController">
+    <aura:attribute name="todos" type="Todo__c[]" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="newTodoCreated" event="c:TodoChangeEvent" action="{!c.handleNewTodo}"/>
+    <aura:handler name="todoUpdated" event="c:TodoChangeEvent" action="{!c.handleTodoUpdate}"/>
+    <aura:handler name="todoDeleted" event="c:TodoChangeEvent" action="{!c.handleTodoDelete}"/>
+
+    <ltng:require styles="{!join(',',
+                            $Resource.TodoCss + '/base.css',
+                            $Resource.TodoCss + '/index.css')}"/>
+    <div>.
+        <section id="todoapp">
+            <c:TodoHeader/>
+            <c:TodoBody todoList="{!v.todos}" />
+            <c:TodoFooter/>
+        </section>
+    </div>
+</aura:component>
