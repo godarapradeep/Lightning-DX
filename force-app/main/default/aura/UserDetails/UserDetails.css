@@ -1,0 +1,9 @@
+.THIS .wrapper-div1 {
+    border: 1px solid red;
+}
+.THIS .wrapper-div2 {
+    border: 1px solid green;
+}
+.THIS {
+    font-weight: bold;
+}
